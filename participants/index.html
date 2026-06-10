@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<?php session_start(); ?>
+<div class="container">
+  <div class="row justify-content-center align-items-center min-vh-100">
+    <div class="col-md-5">
+      <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-body p-5">
+          <h2 class="text-center fw-bold mb-2">User Login</h2>
+          <p class="text-center text-muted mb-4">Sign in to manage events and certificates</p>
+          <form action="../main.php?flag=15" method="POST">
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="text" name="user_email" class="form-control" placeholder="Enter email" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" name="user_pass" class="form-control" placeholder="Enter password" required>
+            </div>
+            <div class="d-flex justify-content-between mb-3">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="remember_me" id="remember">
+                <label class="form-check-label" for="remember">Remember me</label>
+              </div>
+              <a href="forgot_password.php" class="text-decoration-none">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn btn-dark w-100">Login</button>
+          </form>
+          <p class="text-center mt-4 mb-0">Don't have an account? <a href="register.php" class="text-decoration-none">Register</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

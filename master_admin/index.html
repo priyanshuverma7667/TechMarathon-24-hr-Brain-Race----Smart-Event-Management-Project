@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Login</title>
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#0f172a;
+font-family:Arial,sans-serif;
+padding:20px;
+}
+
+.login-wrapper{
+width:100%;
+max-width:430px;
+background:#ffffff;
+border-radius:24px;
+overflow:hidden;
+box-shadow:0 25px 50px rgba(0,0,0,.28);
+}
+
+.login-header{
+background:linear-gradient(135deg,#2563eb,#06b6d4);
+padding:30px 25px;
+text-align:center;
+color:#fff;
+}
+
+.login-header i{
+font-size:38px;
+margin-bottom:10px;
+}
+
+.login-header h2{
+margin:0;
+font-size:28px;
+font-weight:700;
+}
+
+.login-header p{
+margin:6px 0 0;
+font-size:14px;
+opacity:.95;
+}
+
+.login-body{
+padding:30px;
+}
+
+.form-label{
+font-size:14px;
+font-weight:700;
+color:#111827;
+margin-bottom:8px;
+}
+
+.input-group{
+margin-bottom:18px;
+}
+
+.input-group-text{
+background:#eff6ff;
+border:1px solid #dbeafe;
+color:#2563eb;
+border-radius:14px 0 0 14px;
+}
+
+.form-control{
+height:50px;
+border-radius:0 14px 14px 0;
+border:1px solid #dbeafe;
+font-size:15px;
+}
+
+.form-control:focus{
+box-shadow:none;
+border-color:#2563eb;
+}
+
+.login-btn{
+width:100%;
+border:none;
+padding:14px;
+border-radius:14px;
+font-size:16px;
+font-weight:700;
+color:#fff;
+background:linear-gradient(135deg,#2563eb,#06b6d4);
+transition:.3s;
+margin-top:8px;
+}
+
+.login-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 20px rgba(37,99,235,.25);
+}
+
+.footer-text{
+text-align:center;
+font-size:13px;
+color:#6b7280;
+margin-top:18px;
+}
+
+@media(max-width:500px)
+{
+.login-body{
+padding:22px;
+}
+
+.login-header h2{
+font-size:24px;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="login-wrapper">
+
+<div class="login-header">
+<i class="fa fa-user-shield"></i>
+<h2>Admin Login</h2>
+<p>Access Smart Event Dashboard</p>
+</div>
+
+<div class="login-body">
+
+<form method="post" action="../main.php?flag=1">
+
+<label class="form-label">Admin Email</label>
+
+<div class="input-group">
+<span class="input-group-text">
+<i class="fa fa-envelope"></i>
+</span>
+
+<input
+type="email"
+name="admin_email"
+class="form-control"
+placeholder="Enter admin email"
+maxlength="30"
+minlength="5"
+required>
+</div>
+
+<label class="form-label">Password</label>
+
+<div class="input-group">
+<span class="input-group-text">
+<i class="fa fa-lock"></i>
+</span>
+
+<input
+type="password"
+name="admin_pass"
+class="form-control"
+placeholder="Enter password"
+maxlength="30"
+minlength="5"
+required>
+</div>
+
+<input type="submit" value="Login" class="login-btn">
+
+</form>
+
+<div class="footer-text">
+Smart Event Management System
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

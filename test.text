@@ -1,0 +1,33 @@
+$event_id = $_POST["event_id"];
+        $event_co_ids   = $_POST["event_co_id"];
+
+        $count = 0;
+
+        foreach($event_co_ids as $co_id)
+        {
+            if($co_id != "")
+            {
+                $check = "select * from event_coordinator_map
+                        where event_id = '$event_id'
+                        and event_co_id = '$co_id'";
+
+                $check_result = mysqli_query($conn,$check);
+
+                if(mysqli_num_rows($check_result) == 0)
+                {
+                    $sql = "insert into event_coordinator_map(event_id,event_co_id)
+                            values('$event_id','$co_id')";
+
+                    mysqli_query($conn,$sql);
+
+                    $count++;
+                }
+            }
+        }
+
+        if($count > 0)
+            header("Location:master_admin/dashboard.php?msg=1");
+        else
+            header("Location:master_admin/event_coordinator.php?msg=0");
+$mail->Username = 'priyanshu76670@gmail.com';
+$mail->Password = 'dpeixoaddetvqiem';
